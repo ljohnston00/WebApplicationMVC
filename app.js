@@ -12,7 +12,7 @@ const app = express();
 
 let port = 3000;
 let host = 'localhost';
-let url = 'mongodb+srv://ljohnston1:42Tisf@cluster0.cegv9aa.mongodb.net/'
+let url = 'mongodb+srv://ljohnston2001:<password>@cluster0.snuaviq.mongodb.net/nbda-project3?retryWrites=true&w=majority'
 app.set('view engine', 'ejs');
 
 
@@ -30,7 +30,7 @@ app.use(
         secret: "ajfeirf90aeu9eroejfoefj",
         resave: false,
         saveUninitialized: false,
-        store: new MongoStore({mongoUrl: 'mongodb+srv://ljohnston2001:7x43b1A!@cluster0.snuaviq.mongodb.net/nbda-project3?retryWrites=true&w=majority'}),
+        store: new MongoStore({mongoUrl: 'mongodb+srv://ljohnston2001:<password>@cluster0.snuaviq.mongodb.net/nbda-project3?retryWrites=true&w=majority'}),
         cookie: {maxAge: 60*60*1000}
         })
 );
