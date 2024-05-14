@@ -1,0 +1,60 @@
+<%- include('../partials/header.ejs')%>
+<div class = "flexcolumn eventswrapper">
+    <%if(events.length){%>
+        <p>Select an event to attend from the categories below!</h1>
+       <%let connecting = events.filter(event => event.category === 'connecting');
+       if(connecting.length){%>
+        <h1>Connecting</h1>
+        <%connecting.forEach(event=>{%>
+          <a class="btn2" href="/events/<%= event.id%>"><p><%= event.title%></p></a>
+        <%})};%>
+
+
+
+        
+        <%let sports = events.filter(event => event.category === 'sports');
+        if(sports.length){%>
+          <h1>Moon Sports</h1>
+        <%sports.forEach(event=>{%>
+          <a class="btn2" href="/events/<%= event.id%>"><p><%= event.title%></p></a>
+        <%})};%>
+
+
+
+
+        
+        <%let cuisine = events.filter(event => event.category === 'cuisine');
+        if(cuisine.length){ %>
+          <h1>Moon Cuisine</h1>
+        <%cuisine.forEach(event=>{%>
+          <a class="btn2" href="/events/<%= event.id%>"><p><%= event.title%></p></a>
+        <%})} else {%>
+        <%};%>
+
+
+
+        
+        <%let astronomy = events.filter(event => event.category === 'astronomy');
+        if(astronomy.length){ %>
+          <h1>Moon Astronomy</h1>
+        <%astronomy.forEach(event=>{%>
+          <a class="btn2" href="/events/<%= event.id%>"><p><%= event.title%></p></a>
+        <%})} else {%>
+        <%};%>
+
+
+
+        
+        <%let other = events.filter(event => event.category === 'other');
+        if(other.length){ %>
+          <h1>Other Events</h1>
+        <%other.forEach(event=>{%>
+          <a class="btn2" href="/events/<%= event.id%>"><p><%= event.title%></p></a>
+        <%})} else {%>
+        <%};%>
+    <%}else {%>
+        <p>There are no events.</p>
+    <%}%>
+    
+</div>
+<%- include('../partials/footer.ejs')%>

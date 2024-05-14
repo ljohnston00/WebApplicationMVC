@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Meets</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="/images/icons8-moon-16.png">
+</head>
+<body>
+    <header class="flexrow line">
+            <a href="/" class="btn"><h1>Moon Meets</h1></a>
+        <nav>
+            <ul class="flexrow">
+                <%if(!user) {%>
+                <li><a href='/users/new' class="btn">Sign Up</a></li>
+                <li><a href='/users/login' class="btn">Login</a></li>
+                <%}else {%>
+                <li><a href='/events/new' class="btn">New Event</a></li>
+                <li><a href='/users/profile' class="btn"><%=firstName%>'s Profile</a></li>
+                <li><a href='/users/logout' class="btn">Logout</a></li>
+                <%}%>
+            </ul>
+        </nav>  
+        <hr/>
+        <a href="/events" class="btn">Events</a> 
+        </header>
+
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+        
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message=>{%>
+                <div class='success'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>

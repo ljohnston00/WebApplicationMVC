@@ -1,0 +1,357 @@
+:root{
+    --primary: white;
+    --secondary: rgb(128, 128, 128);
+    --accent: black;
+    --accent2: rgb(192, 192, 192);
+}
+
+/*universal*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flexrow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.flexcolumn{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 71vh;
+}
+h1{
+    font-size: 2rem;
+}
+.titleform{
+    display: inline;
+}
+body, main{
+    gap: 2rem;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+
+/*button type 1*/
+.btn{
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: white;
+    border-radius: 4px;
+}
+.btn:hover, .btn:active{
+    background-color: var(--accent);   
+}
+.btn:visited{
+    color: white;
+}
+
+
+/*button type 2*/
+.btn2{
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: var(--accent);
+    border-radius: 4px;
+}
+.editdelete{
+    font-size:xx-large;
+}
+.btn2:hover, .btn2:active{
+    background-color: var(--secondary);   
+    color: var(--primary);
+}
+.btn2:visited{
+    color: black;
+}
+
+.btn3{
+    text-decoration: none;
+    padding: 1rem 1rem;
+    color: var(--accent);
+    border-radius: 4px;
+    margin: 1rem 1rem 1rem 1rem;
+}
+.btn3:hover, .btn3:active{
+    background-color: var(--secondary);   
+    color: var(--primary);
+}
+.btn3:visited{
+    color: black;
+}
+
+
+/*Header*/
+header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    padding: 2rem;
+    color: white;
+}
+header hr {
+    width: 100%;
+}
+
+
+/*Footer*/
+footer{
+    margin-top: auto;
+    background-color: var(--secondary);
+    color: var(--primary);
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem;
+    width: 100%;
+    bottom: 0;
+}
+
+/*Main*/
+.wrapper{
+    width: 90%;
+    max-width: 900px;
+    margin: 0px auto;
+    line-height: 1.5;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    align-items: center;
+    min-height: 80vh;
+}
+
+
+/*events page exclusives*/
+.eventswrapper{
+    width: 90%;
+    max-width: 900px;
+    margin: 0px auto;
+    line-height: 1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/*event page exclusives*/
+.eventwrapper{
+    width: 100%;
+    line-height: 4;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    padding-left: 10%;
+    justify-content: left;
+    min-height: 80vh;
+}
+img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+}
+
+/*new event page exclusives*/
+.neweventwrapper{
+    width: 100%;
+    margin: 0px auto;
+    line-height: 1.5;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    align-items: center;
+    min-height: 80vh;
+}
+input, textarea, select{
+    font-size: 2em;
+    background-color: var(--accent2);
+    border: none;
+    width: 100%;
+    line-height: 2;
+    border-radius: 4px;
+    padding: .1em;
+    margin-bottom: 10px;
+    color: white;
+}
+input::placeholder, textarea::placeholder, select::placeholder{
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: var(--accent2);
+   
+    color: var(--primary);
+    padding: 0.5em 0;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: var(--accent);
+}
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+
+.flex label{
+    width: 100px;
+
+}
+
+/*error page*/
+.error{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Profile */
+.profileEvents {
+    border-color: var(--secondary);
+    border-style: solid;
+    border-radius: 4px;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.delEdBtns{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* flash */
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+  }
+  
+  .error {
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+  }
+
+  /* RSVP */
+.Yes{
+    text-decoration: none;
+    padding: 0.4rem .4rem;
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(7, 224, 7);
+}
+.Yes:hover, .Yes:active{
+    background-color: white;   
+    color: rgb(7, 224, 7);
+}
+.Yes:visited{
+    color: white;
+}
+
+.No{
+    text-decoration: none;
+    padding: 0.4rem .4rem;
+    color: white;
+    border-radius: 4px;
+    background-color: red;
+}
+.No:hover, .No:active{
+    background-color: white;   
+    color: red;
+}
+.No:visited{
+    color: white;
+}
+
+
+.Maybe{
+    text-decoration: none;
+    padding: 0.4rem .4rem;
+    color: white;
+    border-radius: 4px;
+    background-color: blue;
+}
+.Maybe:hover, .Maybe:active{
+    background-color: white;   
+    color: blue;
+}
+.Maybe:visited{
+    color: white;
+}
+
+.size{
+    font-size: large;
+    }
+    
+
+.pHeaders{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    
+}
+
+
+.rsvpEvents {
+    border-color: var(--secondary);
+    border-style: solid;
+    border-radius: 4px;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.eachRsvp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: large;
+}
+
+
+table {
+    width: 80%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+   
+}
+
+th {
+    background-color: var(--secondary);
+    color: white;
+}

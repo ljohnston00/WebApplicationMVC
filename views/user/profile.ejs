@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs')%>
+<main class="flexcolumn eventwrapper">
+    <h1>Welcome, <%=user.firstName%></h1>
+        <%if(events.length){%>
+            <h2>Find your events:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%events.forEach(event=>{%>
+                        <tr>
+                            <td><a class="btn3" href = '/events/<%= event.id%>'><%=event.title%></a></td>
+                            <td><form class=" rightA"><button type="submit" formmethod="GET" formaction="/events/<%= event.id%>/edit"><i class="fa-solid fa-pen-to-square btn2 editdelete btnP"></i></button> <button type="submit" formmethod="POST" formaction="/events/<%= event.id%>?_method=DELETE"> <i class="fa-solid fa-trash btn2 editdelete btnP"></i></button></form></td>
+                        </tr>
+                    <%});%>
+                </tbody>
+            </table>
+            <%} else {%>
+                <p>You have not created any events</p>
+            <%}%>
+
+        <%if(rsvps.length){%>
+                <h2>Find your RSVPs:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Going?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%rsvps.forEach(rsvp=>{%>
+                    <tr>
+                        <td><a class="btn3" href = '/events/<%=rsvp.event.id%>'><%=rsvp.event.title%></a></td>
+                        <td><%= rsvp.status %></td>
+                    </tr>
+                <%});%>
+            </tbody>
+        </table>
+        <%} else {%>
+            <p>You have not RSVPed to any events</p>
+        <%}%>
+    </main>
+    <%- include('../partials/footer.ejs')%>

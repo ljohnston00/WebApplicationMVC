@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')%>
+<main class="flexcolumn neweventwrapper">
+    <form action = '/users' method = 'POST' class="">
+        <div class="flex">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="flex">
+            <label for="lastName">Last Name</label></td>
+            <input type="text" id="lastName" name="lastName" required></td>
+        </div>
+        <div class="flex">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="flex">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="64" required>
+        </div>
+            <div class="flex"><label></label><input type="submit" value="Sign Up"></div>
+    </form>
+</main>
+    <%- include('../partials/footer.ejs')%>

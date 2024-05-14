@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <main class="flexcolumn eventwrapper">
+            <h1><%= event.title %></h1>
+            <h5>Going? <form class="titleform rightA"><button name="rsvp" value="YES" class="Yes size" type="submit" formmethod="POST" formaction="/events/<%= event.id%>/rsvp?_method=POST">Yes</button> <button name="rsvp" value="NO" class="No size btnP" type="submit" formmethod="POST" formaction="/events/<%= event.id%>/rsvp?_method=POST"> No</button> <button name="rsvp" value="MAYBE" class="Maybe size btnP" type="submit" formmethod="POST" formaction="/events/<%= event.id%>/rsvp?_method=POST"> Maybe</button></form> </h5>  
+            <div class="flexrow">
+              <img src="<%=event.image%>" alt="<%=event.title%> image">
+              <div>
+                  <p><strong>Host:</strong> <%= event.author.firstName + ' ' + event.author.lastName%></p>
+                  <p><strong>Date and Time:</strong> Starts: <%= event.start%> Ends: <%=event.end%></p>
+                  <p><strong>Location:</strong> <%= event.location%></p>
+                  <p><strong>Details:</strong> <%= event.content%></p>
+                  <p><strong>Number of rsvps:</strong> <%= rsvpCount%></p>
+              </div>
+            </div>
+          </main>
+    </div>
+   <%- include('../partials/footer.ejs')%>

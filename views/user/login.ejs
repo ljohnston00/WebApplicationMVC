@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>
+<main class="flexcolumn neweventwrapper">
+    <form action = '/users/login' method = 'POST' class="user-form">
+    <div>
+        <label for="email">Email Address</label></td>
+        <input type="email" id="email" name="email" required></td>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="64" required>
+    </div> 
+        <input type="submit" value="Login">     
+    </form>
+</main>
+    <%- include('../partials/footer.ejs')%>
